@@ -264,7 +264,7 @@ span.hidden {
 	width: 700px;
 	padding: 0px 0px 184px 24px;
 	margin: 20px 0px 0px 88px;
-  	border: solid 2px grey;
+  border: solid 2px grey;
 	background-color: #fefefe;
     z-index: 4; /* Specify a stack order in case you're using a different order for other */
 

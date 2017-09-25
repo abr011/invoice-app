@@ -1204,7 +1204,7 @@
                     'thanks': list_of_form_fields.thanks.cleared_input_value,
                 })
 
-                window.location.href = "invoice_to_print2.html";
+                window.location.href = "invoice_to_print.html";
 
             }
 

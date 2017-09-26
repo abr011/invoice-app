@@ -1,0 +1,63 @@
+a.button { /* index */
+    display: block;
+  font-size: 1.2em; 
+    color: white;
+  text-align: center;
+    line-height: 60px;
+    vertical-align: middle;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.button.index {
+  margin: 64px 0px 0px 80px;
+}
+
+/*
+ * key text
+ */
+
+.message {
+  float: left;
+  margin-top: 56px;
+  width: 720px;
+}
+
+.message p {
+  margin: 24px 0px 20px 80px;
+  font-size: 2em;
+  line-height: 1.8em;
+}
+
+.message span {
+  text-decoration: line-through;
+}
+
+/*
+ * invoice-preview
+ */
+
+.preview {
+  position: relative;
+  float: left;
+  margin-top: 24px;
+  width: 382px;
+  height: 520px;
+}
+
+.pic {
+  border: solid 5px lightgrey;
+  margin-left: 0px;
+  box-shadow: 4px 4px grey;
+}
+
+.preview h3 {
+  display: inline-block;
+  margin: 40px 0px 0px 40px;
+  padding: 8px 20px 2px 20px;
+  font-size: 1.2em;
+  background-color: lightgrey;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  box-shadow: 4px 4px grey;
+}

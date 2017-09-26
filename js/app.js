@@ -1251,7 +1251,7 @@
             var pure_invoice_number = inv_number + invoice_number_year;
             var for_what = snapshot.val().for_what;
             var amount = snapshot.val().amount + " Kč";
-            var pure_amount = snapshot.val().amount;
+            var pure_amount = snapshot.val().amount; // vyhazet z nej mezery
             var date_to_send = snapshot.val().date_to_send;
             var date_issued = snapshot.val().date_issued;
             var thanks = snapshot.val().thanks;

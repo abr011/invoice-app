@@ -1,0 +1,208 @@
+/*
+ * steps and their position 
+ */
+
+
+.step1, .step2 { 
+  width: 700px;
+  padding: 0px 0px 184px 24px;
+  margin: 20px 0px 0px 88px;
+  border: solid 2px grey;
+  background-color: #fefefe;
+    z-index: 4; /* Specify a stack order in case you're using a different order for other */
+
+}
+
+.step2 { 
+  margin-top: 0px;
+  
+}
+
+.initial_position {
+  position: relative;
+  top: -400px;
+  
+}
+
+.out_position {
+  position: relative;
+  left: -1400px;
+  
+}
+
+
+/* 
+animations 
+*/
+
+
+@keyframes progressAnimation {
+  0%   { width: 0; }
+  20%  { width: 5%; }
+  40%  { width: 20%; }
+  60%  { width: 70%; }
+  80%  { width: 75%; }
+  100% { width: 100%; }
+}
+
+@-webkit-keyframes progressAnimation {
+  0%   { width: 0; }
+  20%  { width: 5%; }
+  40%  { width: 20%; }
+  60%  { width: 70%; }
+  80%  { width: 75%; }
+  100% { width: 100%; }
+}
+
+@keyframes bounce_Out_Left {
+  20% {
+    opacity: 1;
+    transform: translate3d(20px, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(-1000px, 0, 0);
+  }
+}
+
+.bounce_Out_Left {
+  animation-name: bounce_Out_Left;
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+@keyframes bounce_In_Right {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(1500px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+.bounce_In_Right {
+  animation-name: bounce_In_Right;
+  animation-duration: 280ms;
+  animation-iteration-count: 1;
+}
+
+@keyframes bounce_Out_Right {
+  20% {
+    opacity: 1;
+    transform: translate3d(-20px, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(1000px, 0, 0);  /* Bylo to 2000 */
+  }
+}
+
+.bounce_Out_Right {
+  animation-name: bounce_Out_Right;
+  animation-duration: 280ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounce_In_Left {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+.bounce_In_Left {
+  animation-name: bounce_In_Left;
+  animation-duration: 280ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  
+}
+
+@keyframes zoom_Out {
+  from {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0;
+    transform: scale3d(.13, .13, .1) translate3d(1710px, -980px, 0px);
+
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.zoom_Out {
+  animation-name: zoom_Out;
+  animation-duration: 600ms;
+  animation-iteration-count: 1;
+}
+
+@keyframes fade_Out {
+  from {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0;
+    transform: scale3d(.35, .35, .35) translate3d(410px, -320px, 0px);
+
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fade_Out {
+  animation-name: fade_Out;
+  animation-duration: 600ms;
+  animation-iteration-count: 1;
+}
+

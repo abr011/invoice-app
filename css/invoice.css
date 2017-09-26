@@ -1,0 +1,177 @@
+.invoice_info {
+  float: left;
+  width: 688px;
+}
+
+.invoice_info h2 {
+  padding-bottom: 0px;
+}
+
+
+/*
+ * input width
+ */
+
+
+input#new_thanks  {
+  width: 220px;
+}
+
+input#new_date_to_send, 
+input#new_date_issued {
+  width: 120px;
+}
+
+input#new_amount {
+  width: 112px;
+}
+
+input#new_invoice_number_year  {
+  width: 56px;
+  margin-left: 20px;
+}
+
+input#new_invoice_number  {
+  width: 32px;
+  padding-right: 0px;
+}
+
+/*
+ * additional info
+ */
+
+.additional_info .today {  
+  display: inline-block;
+  margin: 0px;
+  font-size: .75rem; 
+}
+
+.additional_info .last_month { 
+  display: inline-block;
+  margin: 0px 0px 0px 10px;
+  font-size: .75rem; 
+}
+
+.additional_info input { 
+  display: inline-block;
+  width: 16px;
+  margin-bottom: 0px;
+
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+/* Safari and Chrome */
+.additional_info input { 
+  
+  margin-bottom: 10px;
+
+}
+}
+
+/* 
+  client - list, selected etc
+*/
+
+.client .additional_info, .client_list .additional_info {  
+  display: inline-block;
+  padding: 4px 8px 4px 4px;
+  margin: 0px 0px 0px 0px;
+}
+
+.client_info , .client_info_selected {
+  display: inline-block;
+  height: 22px;
+  float: left;
+  font-size: 1.125em;
+  font-weight: 400;
+  cursor: pointer;
+  margin-right: 8px;
+
+}
+
+.client_list {  
+  position: absolute;
+  margin: 8px 10px 10px 40px;
+  padding: 4px 8px 8px 4px;
+  background-color: #eee;
+}
+
+.client_list_item {
+  
+  margin: 4px 0px 0px 2px;
+  padding: 4px 8px 4px 4px;
+  
+}
+
+.client_list_item:hover {
+  background-color: lightgrey;
+}
+
+.client .client_info_selected.focus { 
+  outline: none;
+  border-bottom: solid 2px #1a1eb2;
+  
+}
+
+.client_info_selected { 
+  outline: none;
+  border-bottom: solid 2px #aaa;
+
+  
+}
+
+.client_list .mini_button {  
+  display: inline-block;
+  margin: 24px 0px 16px 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: .8em; 
+  background-color: #444;
+  padding: 8px 16px 8px 16px;
+  color: #eee;
+  border-radius: 2px;
+}
+
+/*
+ * about me info box
+ */
+
+.my_info h4 {
+  margin: 4px 0px 8px 0px;
+  font-size: .8em;
+}
+
+.my_info p.break {
+  padding-top: 8px;
+}
+
+.my_info {
+  float: left;
+  margin-top: 86px;
+  margin-left: 0px;
+  padding: 0px 0px 0px 16px;
+  line-height: 1.5em;
+  font-size:.875em;
+  position: relative;
+}
+
+.my_info::before {
+  content: " ";
+    box-sizing: border-box;
+  width: 1px;
+  height: 80%;
+  margin-top: 14px;
+  background-color: #ddd;
+  position: absolute;
+  left: 0px;
+}
+
+.my_info .link_button {  
+  display: inline-block;
+  margin: 16px 0px 0px 0px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: .8em; 
+  text-transform: uppercase;
+  color: #ff9000;
+}

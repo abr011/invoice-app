@@ -1,0 +1,64 @@
+/* input length */
+
+input#new_my_account_number {
+  width: 112px;
+  padding-right: 0;
+}
+
+input#my_address_town  {
+  width: 112px;
+}
+
+input#new_my_legal_id {
+  width: 104px;
+  padding-right: 0px;
+}
+
+input#new_my_address_zip {
+  width: 72px;
+  padding-right: 0px;
+}
+
+input#new_my_account_number_prefix {
+  width: 64px;
+  padding-right: 0px;
+}
+
+input#new_my_bank_code {
+  width: 56px;
+  padding-right: 0;
+}
+
+
+/*
+ * steps and their position 
+ */
+
+
+
+.step1, .step2 { 
+  width: 700px;
+  padding: 0px 0px 184px 24px;
+  margin: 20px 0px 0px 88px;
+  border: solid 2px grey;
+  background-color: #fefefe;
+    z-index: 4; /* Specify a stack order in case you're using a different order for other */
+
+}
+
+.step2 { 
+  margin-top: 0px;
+  
+}
+
+.initial_position {
+  position: relative;
+  top: -400px;
+  
+}
+
+.out_position {
+  position: relative;
+  left: -1400px;
+  
+}

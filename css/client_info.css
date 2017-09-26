@@ -1,0 +1,50 @@
+/* input length */
+
+input#new_client_tax_id {
+  width: 104px;
+  padding-right: 0px;
+}
+
+input#new_client_legal_id {
+  width: 104px;
+  padding-right: 0px;
+}
+
+input#new_client_address_zip {
+  width: 72px;
+  padding-right: 0px;
+}
+
+
+/*
+ * steps and their position 
+ */
+
+
+
+.step1, .step2 { 
+  width: 700px;
+  padding: 0px 0px 184px 24px;
+  margin: 20px 0px 0px 88px;
+  border: solid 2px grey;
+  background-color: #fefefe;
+    z-index: 4; /* Specify a stack order in case you're using a different order for other */
+
+}
+
+.step2 { 
+  margin-top: 0px;
+  
+}
+
+.initial_position {
+  position: relative;
+  top: -400px;
+  
+}
+
+.out_position {
+  position: relative;
+  left: -1400px;
+  
+}

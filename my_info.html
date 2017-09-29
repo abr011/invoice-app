@@ -1,154 +1,141 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<title>Me</title>
-	
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/anime.css">
-	<link rel="stylesheet" href="css/my_info.css">
-
-	
-
-	<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
-
-	<script src="js/jquery-3.1.1.min.js"></script>
-	<script src="js/moment.js"></script>
-
-	<script src="js/main.js"></script>
-
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/anime.css">
+    <link rel="stylesheet" href="css/my_info.css">
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
-	
-	<div class="container">
-		
-		<div class="step1">
-		<h2 class="">Údaje o Vaší firmě <span></span> </h2>
-		
-			<div id="my_legal_id"> 
-			    <div class="status"> <!-- vyhodit div a puzivat after a befor u imput field -->
-			    </div>
-				<div class="input">    
-		    		<label for="new_my_legal_id">Vaše IČ </label>
-		    		<input id="new_my_legal_id" type="text" placeholder=""> <span></span>
-				</div>
-			</div>
 
-			<div id="my_account_number">
-			    <div class="status">
-			    </div>
-				<div class="input my_account_number">    
-					<label for="new_my_account_number">Číslo vašeho bankovního účtu</label>
-					<input id="new_my_account_number_prefix" type="text" placeholder=""> &nbsp; &ndash; &nbsp;
-					<input id="new_my_account_number" type="text" placeholder=""> &nbsp; / &nbsp; 
-					<input id="new_my_bank_code" type="text" placeholder=""> <span></span>
-				</div>
-			</div>
-			<div class="buttons">
-				<div id="confirm_form" class="buttons form">
-					<div class="button disabled">
-						<p>Potvrdit údaje<br><span>a získat data z rejstříku</span></p>
-					</div>
-					<div class="small">
-						nebo
-					</div>
-					<div class="link">
-						Na úvodní stránku
-					</div>
-				</div>
-			</div>
-		</div>
+<div class="container">
+    <div class="step1">
+        <h2 class="">Údaje o Vaší firmě <span></span></h2>
 
-		<div class="step2 initial_position hidden">
-		<h2 class="">Název a sídlo Vaší firmy <span></span> </h2>
-			
-			<div id="my_name">
-			    <div class="status">
-			    </div>
-				<div class="input my_name">    
-		    		<label for="new_my_name">Název firmy </label>  
-		    		<input id="new_my_name" type="text" placeholder=""><span></span>
-				</div>
-			</div>
+        <div id="my_legal_id">
+            <div class="status"> <!-- vyhodit div a puzivat after a befor u imput field -->
+            </div>
+            <div class="input">
+                <label for="new_my_legal_id">Vaše IČ </label>
+                <input id="new_my_legal_id" type="text" placeholder=""> <span></span>
+            </div>
+        </div>
 
-			<div id="my_address_street">
-			    <div class="status">
-			    </div>
-				<div class="input my_address_street">    
-		    		<label for="new_my_address_street">Ulice a č.p.</label>  
-		    		<input id="new_my_address_street" type="text" placeholder=""><span></span>
-				</div>
-			</div>
+        <div id="my_account_number">
+            <div class="status">
+            </div>
+            <div class="input my_account_number">
+                <label for="new_my_account_number">Číslo vašeho bankovního účtu</label>
+                <input id="new_my_account_number_prefix" type="text" placeholder=""> &nbsp; &ndash; &nbsp;
+                <input id="new_my_account_number" type="text" placeholder=""> &nbsp; / &nbsp;
+                <input id="new_my_bank_code" type="text" placeholder=""> <span></span>
+            </div>
+        </div>
+        <div class="buttons">
+            <div id="confirm_form" class="buttons form">
+                <div class="button disabled">
+                    <p>Potvrdit údaje<br><span>a získat data z rejstříku</span></p>
+                </div>
+                <div class="small">
+                    nebo
+                </div>
+                <div class="link">
+                    Na úvodní stránku
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<div id="my_address_town">
-			    <div class="status unchecked">
-			    </div>
-				<div class="input my_address_town">    
-		    		<label for="new_my_address_town">Obec</label>  
-		    		<input id="new_my_address_town" type="text" placeholder=""><span></span>
-				</div>
-			</div>
+    <div class="step2 initial_position hidden">
+        <h2 class="">Název a sídlo Vaší firmy <span></span></h2>
 
-			<div id="my_address_zip">
-			    <div class="status unchecked">
-			    </div>
-				<div class="input my_address_zip">    
-		    		<label for="new_my_address_zip">PSČ</label>  
-    				<input id="new_my_address_zip" type="text" placeholder=""><span></span>
-				</div>
-			</div>
+        <div id="my_name">
+            <div class="status">
+            </div>
+            <div class="input my_name">
+                <label for="new_my_name">Název firmy </label>
+                <input id="new_my_name" type="text" placeholder=""><span></span>
+            </div>
+        </div>
 
-			<div class="buttons">
-				<div id="confirm_about_me" class="buttons form">
-					<div class="button disabled">
-						<p>Potvrdit údaje<br><span>a pokračovat s údaji o klientovi</span></p>
-					</div>
-					<div class="small">
-						nebo
-					</div>
-					<div class="link">
-						Zpět na základní údaje
-					</div>
-				</div>
-			</div>
+        <div id="my_address_street">
+            <div class="status">
+            </div>
+            <div class="input my_address_street">
+                <label for="new_my_address_street">Ulice a č.p.</label>
+                <input id="new_my_address_street" type="text" placeholder=""><span></span>
+            </div>
+        </div>
 
-		</div>
-		
+        <div id="my_address_town">
+            <div class="status unchecked">
+            </div>
+            <div class="input my_address_town">
+                <label for="new_my_address_town">Obec</label>
+                <input id="new_my_address_town" type="text" placeholder=""><span></span>
+            </div>
+        </div>
 
-	</div>
-	<div class="loader hidden"></div>
+        <div id="my_address_zip">
+            <div class="status unchecked">
+            </div>
+            <div class="input my_address_zip">
+                <label for="new_my_address_zip">PSČ</label>
+                <input id="new_my_address_zip" type="text" placeholder=""><span></span>
+            </div>
+        </div>
 
-	<script>
-		const config = {
-	        apiKey: "AIzaSyDrqihmPtjDnEgm2j0rGhR1-QbiIWCmldo",
-	        authDomain: "invoice-71a47.firebaseapp.com",
-	        databaseURL: "https://invoice-71a47.firebaseio.com",
-	        projectId: "invoice-71a47",
-	        storageBucket: "invoice-71a47.appspot.com",
-	        messagingSenderId: "845423691647"
-    	};
+        <div class="buttons">
+            <div id="confirm_about_me" class="buttons form">
+                <div class="button disabled">
+                    <p>Potvrdit údaje<br><span>a pokračovat s údaji o klientovi</span></p>
+                </div>
+                <div class="small">
+                    nebo
+                </div>
+                <div class="link">
+                    Zpět na základní údaje
+                </div>
+            </div>
+        </div>
 
-    	firebase.initializeApp(config);
+    </div>
 
-    	var database = firebase.database();
+</div>
+<div class="loader hidden"></div>
 
-    	var firebaseRef = firebase.database().ref();
+<script>
+	const config = {
+		apiKey: "AIzaSyDrqihmPtjDnEgm2j0rGhR1-QbiIWCmldo",
+		authDomain: "invoice-71a47.firebaseapp.com",
+		databaseURL: "https://invoice-71a47.firebaseio.com",
+		projectId: "invoice-71a47",
+		storageBucket: "invoice-71a47.appspot.com",
+		messagingSenderId: "845423691647"
+	};
 
-    	var animationInRight = "animated bounceInRight";
-	    var animationOutLeft = "animated bounceOutLeft";
-	    var animationShake = "animated shake";
-	    var animationFadeInDown = "animated slideInDown"
-	    var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
-	    
-	</script>
-							
-		
-	<script src="js/my_info.js"></script>		
-		
+	firebase.initializeApp(config);
+
+	var database = firebase.database();
+
+	var firebaseRef = firebase.database().ref();
+
+	var animationInRight = "animated bounceInRight";
+	var animationOutLeft = "animated bounceOutLeft";
+	var animationShake = "animated shake";
+	var animationFadeInDown = "animated slideInDown"
+	var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+
+</script>
+
+<script src="js/my_info.js"></script>
+
 </body>
 </html>

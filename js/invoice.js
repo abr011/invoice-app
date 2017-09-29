@@ -181,21 +181,42 @@ function readLastInvoiceFromFirebase(connection) {
 	var invoice = {
 		'key': '',
 		'client': '',
+        'me': '',
 		'number': 1,
+        'year': 2017,
+        'date_issued': '1. 1. 2017',
+        'date_to_send': '14. 1. 2017',
+        'amount': 1000,
+        'for_what': '',
+        'thanks': '',
 	}
 
 	invoiceRef.limitToLast(1).on('child_added', function (snapshot) {
-		invoice.key = snapshot.key;
-		invoice.client = snapshot.child("client_key").val();
+		invoice.key = snapshot.key; //
+		invoice.client = snapshot.child("client_key").val(); //
+        invoice.me = snapshot.child("my_key").val(); //
 		invoice.number = snapshot.child("invoice_number").val()
+        invoice.year = snapshot.child("invoice_number_year").val();
+        invoice.date_issued = snapshot.child("date_issued").val(); //
+        invoice.date_to_send = snapshot.child("date_to_send").val(); //
+        invoice.amount = snapshot.child("amount").val();
+        invoice.for_what = snapshot.child("for_what").val();
+        invoice.thanks = snapshot.child("thanks").val();
+
 	});
 
-	return invoice;
+	return invoice; // ten return umozni ty dlasi funkci pouzit "invoice", jo?
+
 }
+
 
 // TODO dopsat
 function renderLastInvoiceToForm(invoice) {
 	$('#new_invoice_number').val(invoice.number);
+    $('#new_invoice_number_year').val(invoice.year);
+    $('#new_amount').val(invoice.amount);
+    $('#new_for_what').val(invoice.for_what);
+    $('#new_thanks').val(invoice.thanks);
 }
 
 

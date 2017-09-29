@@ -17,8 +17,8 @@
 	<link rel="stylesheet" href="css/jquery-ui.css">
 	<script src="js/jquery-ui.js"></script>
   	
+	<script src="js/main.js"></script>
 
-	<script>var view="invoice"</script>
 
 </head>
 <body>
@@ -70,61 +70,26 @@
 				</div>
 			</div>
 			
-			<!-- new -->
 		
-		<div class="client"> 
-				<div class="status">
-		    	</div>   
-		    	<label for="new_client">Klient</label> 
-		    	<div class="client_info_selected"> 
-		    	</div>
-		    	<span class="additional_info">Nadražní 89, Praha 5 - 150 00, IČ 21212121</span>
-		</div>
-
-		<div class="client_list hidden">
-			<div class="rows">
-		   <!--  		
-		    <div class="client_list_item">
-		    	<div class="client_info">
-		    	</div>
-		    	<span class="additional_info"></span>
-		    </div>	
-		    -->
-		    </div>
-	    		<div >
-	    		<a class="mini_button" id="add_client" href="client_info.html">PŘIDAT KLIENTA</a>
-	    		</div>
-
-		</div>
-			
-			<!-- new -->
-			<!-- old 
-			
 			<div class="client"> 
-				<div class="status">
-		    	</div>   
-		    	<label for="new_client">Klient</label> 
-		    	
-		    	<div class="client_info_a"> 
-		    	</div>
-		    	<span class="additional_info_a"></span>
-		    	
-		    	
+					<div class="status">
+			    	</div>   
+			    	<label for="new_client">Klient</label> 
+			    	<div class="client_info_selected"> 
+			    	</div>
+			    	<span class="additional_info">Nadražní 89, Praha 5 - 150 00, IČ 21212121</span>
+			</div>
 
-		    	<div class="select_client_list hidden">
-		    		<div class="client_list">
-		    		
-		    		</div>
+			<div class="client_list hidden">
+				<div class="rows">
+			
+			    </div>
 		    		<div >
 		    		<a class="mini_button" id="add_client" href="client_info.html">PŘIDAT KLIENTA</a>
 		    		</div>
 
-		    	</div>
-		    	
-
 			</div>
 
-			-->
 
 	    	<div id="amount">
 	    		<div class="status">
@@ -145,7 +110,7 @@
 					
 				</div>
 			</div>
-	
+
 			<div id="thanks">
 	    		<div class="status">
 		    	</div>
@@ -170,25 +135,43 @@
 				</div>
 			</div>
 
-			
+		
 			<div id="footer">
 			</div>	
 			
 		</div>
 
 		<div class="my_info">
-
-		<h4>Informace o Vás</h4>
-			<div id="about_me">
-			
-			</div>
-			<div class="link_button">
-			Změnit údaje
-			</div>
+			<h4>Informace o Vás</h4>
+				<div id="about_me">
+				
+				</div>
+				<div class="link_button">
+				Změnit údaje
+				</div>
 		</div>
 						
-	</div>			
-			<script src="js/app.js"></script>
+	</div>		
+
+	<script>
+		const config = {
+	        apiKey: "AIzaSyDrqihmPtjDnEgm2j0rGhR1-QbiIWCmldo",
+	        authDomain: "invoice-71a47.firebaseapp.com",
+	        databaseURL: "https://invoice-71a47.firebaseio.com",
+	        projectId: "invoice-71a47",
+	        storageBucket: "invoice-71a47.appspot.com",
+	        messagingSenderId: "845423691647"
+    	};
+
+    	firebase.initializeApp(config);
+
+    	var database = firebase.database();
+
+    	var firebaseRef = firebase.database().ref();
+
+	</script>
+							
+	<script src="js/invoice.js"></script>		
 				
 		
 </body>

@@ -17,7 +17,7 @@
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/moment.js"></script>
 
-	<script>var view="preview"</script>
+	<script src="js/main.js"></script>
 
 
 </head>
@@ -112,7 +112,28 @@
 <div class="qr">
 
 </div>
-			<script src="js/app.js"></script>
+
+<script>
+		const config = {
+	        apiKey: "AIzaSyDrqihmPtjDnEgm2j0rGhR1-QbiIWCmldo",
+	        authDomain: "invoice-71a47.firebaseapp.com",
+	        databaseURL: "https://invoice-71a47.firebaseio.com",
+	        projectId: "invoice-71a47",
+	        storageBucket: "invoice-71a47.appspot.com",
+	        messagingSenderId: "845423691647"
+    	};
+
+    	firebase.initializeApp(config);
+
+    	var database = firebase.database();
+
+    	var firebaseRef = firebase.database().ref();
+
+	    
+</script>
+							
+		
+<script src="js/invoice_to_print.js"></script>
 
 		
 </body>

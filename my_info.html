@@ -19,8 +19,9 @@
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/moment.js"></script>
 
+	<script src="js/main.js"></script>
 
-	<script>var view = "my_info"</script>
+
 </head>
 <body>
 	
@@ -121,9 +122,33 @@
 
 	</div>
 	<div class="loader hidden"></div>
+
+	<script>
+		const config = {
+	        apiKey: "AIzaSyDrqihmPtjDnEgm2j0rGhR1-QbiIWCmldo",
+	        authDomain: "invoice-71a47.firebaseapp.com",
+	        databaseURL: "https://invoice-71a47.firebaseio.com",
+	        projectId: "invoice-71a47",
+	        storageBucket: "invoice-71a47.appspot.com",
+	        messagingSenderId: "845423691647"
+    	};
+
+    	firebase.initializeApp(config);
+
+    	var database = firebase.database();
+
+    	var firebaseRef = firebase.database().ref();
+
+    	var animationInRight = "animated bounceInRight";
+	    var animationOutLeft = "animated bounceOutLeft";
+	    var animationShake = "animated shake";
+	    var animationFadeInDown = "animated slideInDown"
+	    var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+	    
+	</script>
 							
 		
-	<script src="js/app.js"></script>		
+	<script src="js/my_info.js"></script>		
 		
 </body>
 </html>

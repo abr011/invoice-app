@@ -1,3 +1,24 @@
+function initFirebaseConnection()
+{
+	const config = {
+		apiKey: "AIzaSyDrqihmPtjDnEgm2j0rGhR1-QbiIWCmldo",
+		authDomain: "invoice-71a47.firebaseapp.com",
+		databaseURL: "https://invoice-71a47.firebaseio.com",
+		projectId: "invoice-71a47",
+		storageBucket: "invoice-71a47.appspot.com",
+		messagingSenderId: "845423691647"
+	};
+
+	firebase.initializeApp(config);
+
+	var database = firebase.database();
+
+	// var firebaseRef = firebase.database().ref();
+
+	return database;
+}
+
+
 function input_status(input_name, cleared_input) {
 	if ((input_name.validation.test(cleared_input))) {
 		input_name.status = ok;
